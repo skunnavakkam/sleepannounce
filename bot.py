@@ -92,9 +92,7 @@ async def wake_up_callback(context: ContextTypes.DEFAULT_TYPE) -> None:
         f"{mention} wanted to be woken up NOW!\n\n"
         "Wake them up!! \U0001f4e2"
     )
-    await context.bot.send_message(
-        chat_id=chat_id, text=text, parse_mode="HTML"
-    )
+    await context.bot.send_message(chat_id=chat_id, text=text, parse_mode="HTML")
     pending_jobs.pop(cancel_id, None)
 
 
@@ -152,7 +150,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
 
     text = (
         f"\U0001f634 Sleep well, {name}!\n\n"
-        f"Everyone will be alerted to wake you up at {time_str} on {date_str}.\n"
+        f"Everypony will be alerted to wake you up at {time_str} on {date_str}.\n"
         "Sweet dreams! \U0001f319\n\n"
         f"/cancel {cancel_id}"
     )
